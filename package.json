@@ -1,6 +1,6 @@
 {
   "name": "webpack-extension-manifest-plugin",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "Creates manifest json file based you config",
   "license": "MIT",
   "repository": "GitScrum/webpack-extension-manifest-plugin",
@@ -20,7 +20,7 @@
     "commitmsg": "commitlint --extends=@commitlint/config-angular -e",
     "postpublish": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"chore: Update changelog\"",
     "patch": "np patch --any-branch --no-yarn",
-    "minor": "np minor --any-branch --no-yarn",
+    "minor": "np minor --any-branch --no-yarn --no-cleanup",
     "major": "np major --any-branch --no-yarn",
     "prepare": "npm run build",
     "build": "rimraf lib && babel src -d lib",
