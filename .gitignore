@@ -6,3 +6,4 @@ _gh-pages
 .publish
 coverage
 tmp
+package-lock.json
