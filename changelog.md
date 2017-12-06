@@ -1,3 +1,12 @@
+<a name="0.3.3"></a>
+## 0.3.3 (2017-12-06)
+
+* 0.3.3 ([df81eba](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/df81eba))
+* style: remove logeer, close #10 ([399d7c4](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/399d7c4)), closes [#10](https://github.com/GitScrum/webpack-extension-manifest-plugin/issues/10)
+* build: update changelog ([c309b24](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/c309b24))
+
+
+
 <a name="0.3.2"></a>
 ## 0.3.2 (2017-12-06)
 
