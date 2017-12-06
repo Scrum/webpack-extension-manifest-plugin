@@ -1,6 +1,6 @@
-import fs from 'fs';
 import path from 'path';
 import merge from 'deepmerge';
+import writeJsonFile from 'write-json-file';
 import Reflect from 'core-js/library/es6/reflect';
 
 export default class WebpackExtensionManifestPlugin {
@@ -10,6 +10,7 @@ export default class WebpackExtensionManifestPlugin {
 
     apply(compiler) {
         compiler.plugin('emit', (compilation, callback) => {
+            const filePath = path.join(compilation.outputOptions.path, 'manifest.json');
             let json = '';
 
             if (Reflect.has(this.options.config, 'base')) {
@@ -20,8 +21,7 @@ export default class WebpackExtensionManifestPlugin {
                 json = JSON.stringify(this.options.config || {});
             }
 
-            const file = path.join(compilation.outputOptions.path, 'manifest.json');
-            fs.writeFile(file, json, callback);
+            writeJsonFile(filePath, json).then(callback);
         });
     }
 }
