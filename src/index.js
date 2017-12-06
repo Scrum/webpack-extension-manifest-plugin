@@ -10,6 +10,14 @@ export default class WebpackExtensionManifestPlugin {
 
     apply(compiler) {
         compiler.plugin('emit', (compilation, callback) => {
+            if (typeof this.options !== 'object') {
+                return callback(new Error('options it should be `object`.'));
+            }
+
+            if (Reflect.has(this.options, 'config') && typeof this.options.config !== 'object') {
+                return callback(new Error('config it should be `object`.'));
+            }
+
             const filePath = path.join(compilation.outputOptions.path, 'manifest.json');
             let json = '';
 
