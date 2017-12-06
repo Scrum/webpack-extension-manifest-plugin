@@ -17,7 +17,48 @@ function read(pathFile) {
     });
 }
 
-test.cb('Chould create manifest json in output folder', t => {
+test.cb('Chould create manifest json in output folder using the ready config', t => {
+    t.plan(3);
+
+    const outputDir = tempy.directory();
+    const baseConfig = {name: 'my plugin'};
+    const extendConfig = {version: '0.0.0'};
+    const config = Object.assign(baseConfig, extendConfig);
+
+    webpack({
+        entry: './test/app/app.js',
+        output: {
+            path: outputDir,
+            filename: '[name].js'
+        },
+        plugins: [
+            new Plugin({config: config})
+        ]
+    }, async (err, stats) => {
+        if (err) {
+            return t.end(err);
+        }
+
+        if (stats.hasErrors()) {
+            return t.end(stats.toString());
+        }
+
+        const filePath = path.join(outputDir, 'manifest.json');
+        const file = await read(filePath);
+        const manifest = JSON.parse(file);
+
+        t.deepEqual(config, manifest);
+        t.deepEqual(
+            Object.keys(manifest),
+            Object.keys(config)
+        );
+        t.true(await pathExists(filePath));
+
+        t.end();
+    });
+});
+
+test.cb('Chould create manifest json in output folder using the options', t => {
     t.plan(3);
 
     const outputDir = tempy.directory();
