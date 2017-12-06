@@ -32,7 +32,7 @@ test.cb('Chould create manifest json in output folder', t => {
             filename: '[name].js'
         },
         plugins: [
-            new Plugin(baseConfig, extendConfig)
+            new Plugin({config: {base: baseConfig, extend: extendConfig}})
         ]
     }, async (err, stats) => {
         if (err) {
