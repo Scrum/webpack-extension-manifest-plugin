@@ -24,6 +24,7 @@
     "major": "np major --any-branch --no-yarn",
     "prepare": "npm run build",
     "build": "rimraf lib && babel src -d lib",
+    "codecov": "nyc ava && nyc report --reporter=text-lcov && codecov",
     "test": "nyc ava"
   },
   "files": [
