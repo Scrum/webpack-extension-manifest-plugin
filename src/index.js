@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import merge from 'deepmerge';
+import Reflect from 'core-js/library/es6/reflect';
 
 export default class WebpackExtensionManifestPlugin {
     constructor(options) {
