@@ -29,8 +29,6 @@ export default class WebpackExtensionManifestPlugin {
                 json = this.options.config || {};
             }
 
-            console.log(filePath);
-
             writeJsonFile(filePath, json).then(callback);
         });
     }
