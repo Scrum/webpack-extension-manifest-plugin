@@ -9,4 +9,5 @@ node_js:
 
 script:
   - npm t
-  - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/codecov'
+  - './node_modules/.bin/nyc report --reporter=text-lcov'
+  - './node_modules/.bin/codecov'
