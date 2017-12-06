@@ -1,3 +1,18 @@
+<a name="0.3.1"></a>
+## 0.3.1 (2017-12-06)
+
+* 0.3.1 ([c61c92b](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/c61c92b))
+* build: remove publish on npm from scripts ([bd0052f](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/bd0052f))
+* build: update changelog ([45dbbd1](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/45dbbd1))
+* build: update depdev ([efc1b19](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/efc1b19))
+* build: use build ins in babel ([1498214](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/1498214))
+* test: for issue #6 ([f7a0f7d](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/f7a0f7d))
+* test: perfomance tests ([23e5469](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/23e5469))
+* fix: if dir not exists, close #7 ([1c16e1a](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/1c16e1a)), closes [#7](https://github.com/GitScrum/webpack-extension-manifest-plugin/issues/7)
+* fix: if options or options config not object, close #6 ([5f0cd1a](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/5f0cd1a)), closes [#6](https://github.com/GitScrum/webpack-extension-manifest-plugin/issues/6)
+
+
+
 <a name="0.3.0"></a>
 # 0.3.0 (2017-12-06)
 
