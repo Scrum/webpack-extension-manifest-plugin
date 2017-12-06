@@ -18,7 +18,7 @@
   "scripts": {
     "precommit": "clinton && lint-staged",
     "commitmsg": "commitlint --extends=@commitlint/config-angular -e",
-    "postpublish": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"chore: Update changelog\"",
+    "postpublish": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"build: Update changelog\"",
     "patch": "np patch --any-branch --no-yarn",
     "minor": "np minor --any-branch --no-yarn --no-cleanup",
     "major": "np major --any-branch --no-yarn",
