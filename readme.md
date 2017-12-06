@@ -38,9 +38,21 @@ import pkg from './package.json';
 
 module.exports = {
     plugins: [
-        new WebpackExtensionManifestPlugin(baseManifest, {version: pkg.version})
+        new WebpackExtensionManifestPlugin({
+            config: {
+                base: baseManifest, 
+                extend: {version: pkg.version}
+            }
+        })
     ]
 }
 
 ```
 *Create manifest.json with extend configs `{name: 'my manifest', version: '0.0.0'}`*
+
+## Options
+
+### `config`
+Type: `Object`  
+Default: `{}`  
+Description: *Can take a ready-made configuration for a file manifest or a set of parameters `base`, `extend` *  
