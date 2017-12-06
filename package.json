@@ -39,7 +39,9 @@
   ],
   "dependencies": {
     "core-js": "^2.5.1",
-    "deepmerge": "^2.0.1"
+    "deepmerge": "^2.0.1",
+    "load-json-file": "^4.0.0",
+    "write-json-file": "^2.3.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^5.2.0",

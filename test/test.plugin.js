@@ -1,29 +1,18 @@
 import path from 'path';
-import fs from 'fs';
 import test from 'ava';
 import tempy from 'tempy';
 import pathExists from 'path-exists';
 import webpack from 'webpack';
+import loadJsonFile from 'load-json-file';
 import Plugin from '../src';
 
-function read(pathFile) {
-    return new Promise((resolve, reject) => {
-        fs.readFile(pathFile, 'utf8', (err, data) => {
-            if (err) {
-                reject(err);
-            }
-            return resolve(data);
-        });
-    });
-}
+const outputDir = tempy.directory();
+const baseConfig = {name: 'my plugin'};
+const extendConfig = {version: '0.0.0'};
+const config = Object.assign(baseConfig, extendConfig);
 
 test.cb('Chould create manifest json in output folder using the ready config', t => {
-    t.plan(3);
-
-    const outputDir = tempy.directory();
-    const baseConfig = {name: 'my plugin'};
-    const extendConfig = {version: '0.0.0'};
-    const config = Object.assign(baseConfig, extendConfig);
+    t.plan(2);
 
     webpack({
         entry: './test/app/app.js',
@@ -44,14 +33,8 @@ test.cb('Chould create manifest json in output folder using the ready config', t
         }
 
         const filePath = path.join(outputDir, 'manifest.json');
-        const file = await read(filePath);
-        const manifest = JSON.parse(file);
-
-        t.deepEqual(config, manifest);
-        t.deepEqual(
-            Object.keys(manifest),
-            Object.keys(config)
-        );
+        const manifest = await loadJsonFile(filePath);
+        t.deepEqual(JSON.stringify(config), manifest);
         t.true(await pathExists(filePath));
 
         t.end();
@@ -59,12 +42,7 @@ test.cb('Chould create manifest json in output folder using the ready config', t
 });
 
 test.cb('Chould create manifest json in output folder using the options', t => {
-    t.plan(3);
-
-    const outputDir = tempy.directory();
-    const baseConfig = {name: 'my plugin'};
-    const extendConfig = {version: '0.0.0'};
-    const config = Object.assign(baseConfig, extendConfig);
+    t.plan(2);
 
     webpack({
         entry: './test/app/app.js',
@@ -73,7 +51,12 @@ test.cb('Chould create manifest json in output folder using the options', t => {
             filename: '[name].js'
         },
         plugins: [
-            new Plugin({config: {base: baseConfig, extend: extendConfig}})
+            new Plugin({
+                config: {
+                    base: baseConfig,
+                    extend: extendConfig
+                }
+            })
         ]
     }, async (err, stats) => {
         if (err) {
@@ -85,14 +68,8 @@ test.cb('Chould create manifest json in output folder using the options', t => {
         }
 
         const filePath = path.join(outputDir, 'manifest.json');
-        const file = await read(filePath);
-        const manifest = JSON.parse(file);
-
-        t.deepEqual(config, manifest);
-        t.deepEqual(
-            Object.keys(manifest),
-            Object.keys(config)
-        );
+        const manifest = await loadJsonFile(filePath);
+        t.deepEqual(JSON.stringify(config), manifest);
         t.true(await pathExists(filePath));
 
         t.end();
