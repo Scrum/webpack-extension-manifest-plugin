@@ -113,7 +113,7 @@
       "markdown"
     ],
     "extends": [
-      "plugin:xo/recommended",
+      "plugin:unicorn/recommended",
       "xo"
     ],
     "rules": {
