@@ -1,3 +1,13 @@
+<a name="0.3.2"></a>
+## 0.3.2 (2017-12-06)
+
+* 0.3.2 ([28a9eeb](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/28a9eeb))
+* Update readme.md ([d8d5628](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/d8d5628))
+* fix: double convert to json format ([9235a31](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/9235a31))
+* build: update changelog ([7fff7d2](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/7fff7d2))
+
+
+
 <a name="0.3.1"></a>
 ## 0.3.1 (2017-12-06)
 

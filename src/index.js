@@ -22,12 +22,14 @@ export default class WebpackExtensionManifestPlugin {
             let json = '';
 
             if (Reflect.has(this.options.config, 'base')) {
-                json = JSON.stringify(merge(this.options.config.base, this.options.config.extend || {}));
+                json = merge(this.options.config.base, this.options.config.extend || {});
             }
 
             if (!Reflect.has(this.options.config, 'base')) {
-                json = JSON.stringify(this.options.config || {});
+                json = this.options.config || {};
             }
+
+            console.log(filePath);
 
             writeJsonFile(filePath, json).then(callback);
         });
