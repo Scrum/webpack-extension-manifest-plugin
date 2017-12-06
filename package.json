@@ -38,6 +38,7 @@
     "json"
   ],
   "dependencies": {
+    "core-js": "^2.5.1",
     "deepmerge": "^2.0.1"
   },
   "devDependencies": {
