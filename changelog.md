@@ -1,3 +1,11 @@
+<a name="0.4.1"></a>
+## 0.4.1 (2017-12-07)
+
+* 0.4.1 ([f5eade0](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/f5eade0))
+* build: update changelog ([76da97a](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/76da97a))
+
+
+
 <a name="0.4.0"></a>
 # 0.4.0 (2017-12-06)
 
