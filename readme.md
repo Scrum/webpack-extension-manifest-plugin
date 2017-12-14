@@ -25,7 +25,7 @@ npm i -D webpack-extension-manifest-plugin
 
 **baseManifest.js**
 ```js
-export defautl {
+export default {
     name: 'my manifest'
 }
 ```
