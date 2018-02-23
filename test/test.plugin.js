@@ -27,23 +27,6 @@ test.cb('options should be `object`', t => {
     });
 });
 
-test.cb('options should be `object`', t => {
-    const outputDir = tempy.directory();
-    webpack({
-        entry: './test/app/app.js',
-        output: {
-            path: outputDir,
-            filename: '[name].js'
-        },
-        plugins: [
-            new Plugin('error')
-        ]
-    }, async error => {
-        t.is(error.message, 'options it should be `object`.');
-        t.end();
-    });
-});
-
 test.cb('options config should be `object`', t => {
     const outputDir = tempy.directory();
     webpack({
