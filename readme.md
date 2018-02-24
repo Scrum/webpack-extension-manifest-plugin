@@ -27,7 +27,7 @@ npm i -D webpack-extension-manifest-plugin
 ```js
 export default {
     name: 'my manifest'
-}
+};
 ```
 
 **webpack.config.js**
@@ -40,12 +40,12 @@ module.exports = {
     plugins: [
         new WebpackExtensionManifestPlugin({
             config: {
-                base: baseManifest, 
+                base: baseManifest,
                 extend: {version: pkg.version}
             }
         })
     ]
-}
+};
 
 ```
 *Create manifest.json with extend configs `{name: 'my manifest', version: '0.0.0'}`*
@@ -55,4 +55,4 @@ module.exports = {
 ### `config`
 Type: `Object`  
 Default: `{}`  
-Description: *Can take a ready-made configuration for a file manifest or a set of parameters `base`, `extend` *  
+Description: *Can take a ready-made configuration for a file manifest or a set of parameters `base`, `extend`*  

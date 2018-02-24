@@ -1,5 +1,18 @@
+<a name="0.4.2"></a>
+## <small>0.4.2 (2018-02-23)</small>
+
+* 0.4.2 ([3437d9e](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/3437d9e))
+* fix typo ([7edf70f](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/7edf70f))
+* build: fix lint for md ([7b8c566](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/7b8c566))
+* build: update changelog ([b126bf8](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/b126bf8))
+* docs: fix options description, close #12 ([b174a38](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/b174a38)), closes [#12](https://github.com/GitScrum/webpack-extension-manifest-plugin/issues/12)
+* test: remove dublicate test, close #15 ([e696852](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/e696852)), closes [#15](https://github.com/GitScrum/webpack-extension-manifest-plugin/issues/15)
+* feat: actually add the manifest file to the list of file assets produced ([ae66b23](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/ae66b23))
+
+
+
 <a name="0.4.1"></a>
-## 0.4.1 (2017-12-07)
+## <small>0.4.1 (2017-12-07)</small>
 
 * 0.4.1 ([f5eade0](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/f5eade0))
 * build: update changelog ([76da97a](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/76da97a))
@@ -7,7 +20,7 @@
 
 
 <a name="0.4.0"></a>
-# 0.4.0 (2017-12-06)
+## 0.4.0 (2017-12-06)
 
 * 0.4.0 ([c40d132](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/c40d132))
 * build: update changelog ([94a8378](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/94a8378))
@@ -15,7 +28,7 @@
 
 
 <a name="0.3.3"></a>
-## 0.3.3 (2017-12-06)
+## <small>0.3.3 (2017-12-06)</small>
 
 * 0.3.3 ([df81eba](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/df81eba))
 * style: remove logeer, close #10 ([399d7c4](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/399d7c4)), closes [#10](https://github.com/GitScrum/webpack-extension-manifest-plugin/issues/10)
@@ -24,7 +37,7 @@
 
 
 <a name="0.3.2"></a>
-## 0.3.2 (2017-12-06)
+## <small>0.3.2 (2017-12-06)</small>
 
 * 0.3.2 ([28a9eeb](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/28a9eeb))
 * Update readme.md ([d8d5628](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/d8d5628))
@@ -34,14 +47,14 @@
 
 
 <a name="0.3.1"></a>
-## 0.3.1 (2017-12-06)
+## <small>0.3.1 (2017-12-06)</small>
 
 * 0.3.1 ([c61c92b](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/c61c92b))
 * build: remove publish on npm from scripts ([bd0052f](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/bd0052f))
 * build: update changelog ([45dbbd1](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/45dbbd1))
 * build: update depdev ([efc1b19](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/efc1b19))
 * build: use build ins in babel ([1498214](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/1498214))
-* test: for issue #6 ([f7a0f7d](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/f7a0f7d))
+* test: for issue #6 ([f7a0f7d](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/f7a0f7d)), closes [#6](https://github.com/GitScrum/webpack-extension-manifest-plugin/issues/6)
 * test: perfomance tests ([23e5469](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/23e5469))
 * fix: if dir not exists, close #7 ([1c16e1a](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/1c16e1a)), closes [#7](https://github.com/GitScrum/webpack-extension-manifest-plugin/issues/7)
 * fix: if options or options config not object, close #6 ([5f0cd1a](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/5f0cd1a)), closes [#6](https://github.com/GitScrum/webpack-extension-manifest-plugin/issues/6)
@@ -49,9 +62,10 @@
 
 
 <a name="0.3.0"></a>
-# 0.3.0 (2017-12-06)
+## 0.3.0 (2017-12-06)
 
 * 0.3.0 ([02f61a8](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/02f61a8))
+* Revert "build: lock to ignore" ([043156c](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/043156c))
 * Update readme.md ([615da98](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/615da98))
 * build: add core-js for support Reflect in old node ([4e54b90](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/4e54b90))
 * build: add unicorn recommendation ([df020d1](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/df020d1))
@@ -80,7 +94,7 @@
 
 
 <a name="0.1.0"></a>
-# 0.1.0 (2017-12-05)
+## 0.1.0 (2017-12-05)
 
 * build: add skip clean ([7c07985](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/7c07985))
 * build: lock to ignore ([fc2d00c](https://github.com/GitScrum/webpack-extension-manifest-plugin/commit/fc2d00c))

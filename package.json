@@ -1,6 +1,6 @@
 {
   "name": "webpack-extension-manifest-plugin",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Creates manifest json file based you config",
   "license": "MIT",
   "repository": "GitScrum/webpack-extension-manifest-plugin",
@@ -80,7 +80,7 @@
   },
   "lint-staged": {
     "*.{js,html}": "eslint",
-    "./*.md": "eslint --rule indent: [error, 4] ."
+    "*.md": "eslint"
   },
   "babel": {
     "presets": [
