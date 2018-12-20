@@ -68,11 +68,11 @@
     "webpack-merge": "^4.1.5"
   },
   "husky": {
-      "hooks": {
-        "pre-push": "npm t",
-        "pre-commit": "clinton && lint-staged",
-        "commit-msg": "commitlint --extends=@commitlint/config-angular -e"
-      }
+    "hooks": {
+      "pre-push": "npm t",
+      "pre-commit": "clinton && lint-staged",
+      "commit-msg": "commitlint --extends=@commitlint/config-angular -e"
+    }
   },
   "ava": {
     "require": [
