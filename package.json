@@ -3,9 +3,9 @@
   "version": "0.4.2",
   "description": "Creates manifest json file based you config",
   "license": "MIT",
-  "repository": "GitScrum/webpack-extension-manifest-plugin",
-  "homepage": "GitScrum/webpack-extension-manifest-plugin#readme",
-  "bugs": "GitScrum/webpack-extension-manifest-plugin/issues",
+  "repository": "Scrum/webpack-extension-manifest-plugin",
+  "homepage": "Scrum/webpack-extension-manifest-plugin#readme",
+  "bugs": "Scrum/webpack-extension-manifest-plugin/issues",
   "author": {
     "name": "Ivan Demidov",
     "email": "Scrum@list.ru",
