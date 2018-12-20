@@ -19,7 +19,7 @@ Simplifies the development of cross-platform browser extension
 npm i -D webpack-extension-manifest-plugin
 ```
 
-> **Note:** This project is compatible with node v4+
+> **Note:** This project is compatible with node v6+
 
 ## Usage
 
