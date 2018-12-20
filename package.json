@@ -36,9 +36,7 @@
   ],
   "dependencies": {
     "core-js": "^2.5.1",
-    "deepmerge": "^2.0.1",
-    "load-json-file": "^4.0.0",
-    "write-json-file": "^2.3.0"
+    "deepmerge": "^2.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^5.2.0",
@@ -63,6 +61,7 @@
     "eslint-plugin-unicorn": "^3.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
+    "load-json-file": "^4.0.0",
     "nyc": "^11.3.0",
     "path-exists": "^3.0.0",
     "rimraf": "^2.6.1",
