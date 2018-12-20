@@ -16,9 +16,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "precommit": "clinton && lint-staged",
-    "commitmsg": "commitlint --extends=@commitlint/config-angular -e",
-    "postpublish": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"build: update changelog\"",
+    "version": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"build: update changelog\"",
     "prepare": "npm run build",
     "build": "rimraf lib && babel src -d lib",
     "test": "nyc ava"
@@ -68,6 +66,13 @@
     "tempy": "^0.2.1",
     "webpack": "^4.28.0",
     "webpack-merge": "^4.1.5"
+  },
+  "husky": {
+      "hooks": {
+        "pre-push": "npm t",
+        "pre-commit": "clinton && lint-staged",
+        "commit-msg": "commitlint --extends=@commitlint/config-angular -e"
+      }
   },
   "ava": {
     "require": [
