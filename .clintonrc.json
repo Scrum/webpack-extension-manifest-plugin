@@ -1,0 +1,11 @@
+{
+  "ignores": [
+    "test/**",
+    "lib/**"
+  ],
+  "rules": {
+    "pkg-main": "off",
+    "xo": "off",
+    "ava": "off"
+  }
+}
