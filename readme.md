@@ -19,14 +19,14 @@ Simplifies the development of cross-platform browser extension
 npm i -D webpack-extension-manifest-plugin
 ```
 
-> **Note:** This project is compatible with node v6+
+> **Note:** This project is compatible with node v8+
 
 ## Usage
 
 **baseManifest.js**
 ```js
 export default {
-    name: 'my manifest'
+  name: 'my manifest'
 };
 ```
 
@@ -37,14 +37,14 @@ import baseManifest from './baseManifest.js';
 import pkg from './package.json';
 
 module.exports = {
-    plugins: [
-        new WebpackExtensionManifestPlugin({
-            config: {
-                base: baseManifest,
-                extend: {version: pkg.version}
-            }
-        })
-    ]
+  plugins: [
+    new WebpackExtensionManifestPlugin({
+      config: {
+        base: baseManifest,
+        extend: {version: pkg.version}
+      }
+    })
+  ]
 };
 
 ```
