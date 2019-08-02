@@ -1,10 +1,9 @@
 language: node_js
 node_js:
-  - v10
-  - v9
-  - v8
-  - v7
-  - v6
+  - "node"
+  - "lts/*"
+  - 10
+  - 8
 
 after_success:
-  - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
+  - npm run coverage
