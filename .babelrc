@@ -1,0 +1,24 @@
+{
+    "presets": [
+    [
+        "@babel/preset-env",
+        {
+        "targets": {
+            "node": 4
+        },
+        "corejs": "3.1.4",
+        "useBuiltIns": "usage"
+        }
+    ],
+    [
+        "minify",
+        {
+        "removeUndefined": false,
+        "mangle": false
+        }
+    ]
+    ],
+    "plugins": [
+    "add-module-exports"
+    ]
+}

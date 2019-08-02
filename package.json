@@ -16,7 +16,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "version": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"build: update changelog\"",
+    "version": "conventional-changelog -i changelog.md -s -r 0 && git add changelog.md && git commit -m \"build: update changelog\"",
     "prepare": "npm run build",
     "build": "rimraf lib && babel src -d lib",
     "test": "nyc ava"
@@ -55,11 +55,9 @@
     "eslint-config-xo-space": "^0.21.0",
     "eslint-plugin-ava": "^7.0.0",
     "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-dependencies": "^2.4.0",
-    "eslint-plugin-html": "^5.0.5",
     "eslint-plugin-markdown": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-unicorn": "^9.0.0",
+    "eslint-plugin-unicorn": "^10.0.0",
     "husky": "^3.0.2",
     "lint-staged": "^9.2.1",
     "load-json-file": "^6.2.0",
@@ -67,15 +65,8 @@
     "path-exists": "^4.0.0",
     "rimraf": "^2.6.3",
     "tempy": "^0.3.0",
-    "webpack": "^4.39.0",
+    "webpack": "^4.39.1",
     "webpack-merge": "^4.2.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm t",
-      "pre-commit": "clinton && lint-staged",
-      "commit-msg": "commitlint --extends=@commitlint/config-angular -e"
-    }
   },
   "ava": {
     "require": [
@@ -84,64 +75,5 @@
     "files": [
       "test/**/test.*.js"
     ]
-  },
-  "lint-staged": {
-    "*.{js,html}": "eslint",
-    "*.md": "eslint"
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": 4
-          },
-          "corejs": "3.1.4",
-          "useBuiltIns": "usage"
-        }
-      ],
-      [
-        "minify",
-        {
-          "removeUndefined": false,
-          "mangle": false
-        }
-      ]
-    ],
-    "plugins": [
-      "add-module-exports"
-    ]
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "plugins": [
-      "prettier",
-      "dependencies",
-      "html",
-      "unicorn",
-      "babel",
-      "markdown"
-    ],
-    "extends": [
-      "plugin:ava/recommended",
-      "plugin:unicorn/recommended",
-      "xo",
-      "xo-space"
-    ],
-    "rules": {
-      "capitalized-comments": "off"
-    }
-  },
-  "clinton": {
-    "ignores": [
-      "test/**",
-      "lib/**"
-    ],
-    "rules": {
-      "pkg-main": "off",
-      "xo": "off",
-      "ava": "off"
-    }
   }
 }

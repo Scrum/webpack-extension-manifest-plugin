@@ -1,0 +1,17 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [
+        "unicorn",
+        "babel",
+        "markdown"
+    ],
+    "extends": [
+        "plugin:ava/recommended",
+        "plugin:unicorn/recommended",
+        "xo",
+        "xo-space"
+    ],
+    "rules": {
+        "capitalized-comments": "off"
+    }
+}
