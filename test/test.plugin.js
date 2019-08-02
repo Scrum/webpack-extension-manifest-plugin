@@ -11,102 +11,103 @@ const extendConfig = {version: '0.0.0'};
 const config = Object.assign(baseConfig, extendConfig);
 
 test.cb('options should be `object`', t => {
-    const outputDir = tempy.directory();
-    webpack({
-        entry: './test/app/app.js',
-        output: {
-            path: outputDir,
-            filename: '[name].js'
-        },
-        plugins: [
-            new Plugin('error')
-        ]
-    }, async error => {
-        t.is(error.message, 'options it should be `object`.');
-        t.end();
-    });
+  const outputDirectory = tempy.directory();
+  webpack({
+    mode: 'production',
+    entry: './test/app/app.js',
+    output: {
+      path: outputDirectory,
+      filename: '[name].js'
+    },
+    plugins: [
+      new Plugin('error')
+    ]
+  }, error => {
+    t.is(error.message, 'options it should be `object`.');
+    t.end();
+  });
 });
 
 test.cb('options config should be `object`', t => {
-    const outputDir = tempy.directory();
-    webpack({
-        entry: './test/app/app.js',
-        output: {
-            path: outputDir,
-            filename: '[name].js'
-        },
-        plugins: [
-            new Plugin({config: 'error'})
-        ]
-    }, async error => {
-        t.is(error.message, 'config it should be `object`.');
-        t.end();
-    });
+  const outputDirectory = tempy.directory();
+  webpack({
+    entry: './test/app/app.js',
+    output: {
+      path: outputDirectory,
+      filename: '[name].js'
+    },
+    plugins: [
+      new Plugin({config: 'error'})
+    ]
+  }, async error => {
+    t.is(error.message, 'config it should be `object`.');
+    t.end();
+  });
 });
 
 test.cb('Chould create manifest json in output folder using the ready config', t => {
-    const outputDir = tempy.directory();
-    t.plan(2);
+  const outputDirectory = tempy.directory();
+  t.plan(2);
 
-    webpack({
-        entry: './test/app/app.js',
-        output: {
-            path: outputDir,
-            filename: '[name].js'
-        },
-        plugins: [
-            new Plugin({config: config})
-        ]
-    }, async (err, stats) => {
-        if (err) {
-            return t.end(err);
-        }
+  webpack({
+    entry: './test/app/app.js',
+    output: {
+      path: outputDirectory,
+      filename: '[name].js'
+    },
+    plugins: [
+      new Plugin({config: config})
+    ]
+  }, async (error, stats) => {
+    if (error) {
+      return t.end(error);
+    }
 
-        if (stats.hasErrors()) {
-            return t.end(stats.toString());
-        }
+    if (stats.hasErrors()) {
+      return t.end(stats.toString());
+    }
 
-        const filePath = path.join(outputDir, 'manifest.json');
-        const manifest = await loadJsonFile(filePath);
-        t.deepEqual(config, manifest);
-        t.true(await pathExists(filePath));
+    const filePath = path.join(outputDirectory, 'manifest.json');
+    const manifest = await loadJsonFile(filePath);
+    t.deepEqual(config, manifest);
+    t.true(await pathExists(filePath));
 
-        t.end();
-    });
+    t.end();
+  });
 });
 
 test.cb('Chould create manifest json in output folder using the options', t => {
-    const outputDir = tempy.directory();
-    t.plan(2);
+  const outputDirectory = tempy.directory();
+  t.plan(2);
 
-    webpack({
-        entry: './test/app/app.js',
-        output: {
-            path: outputDir,
-            filename: '[name].js'
-        },
-        plugins: [
-            new Plugin({
-                config: {
-                    base: baseConfig,
-                    extend: extendConfig
-                }
-            })
-        ]
-    }, async (err, stats) => {
-        if (err) {
-            return t.end(err);
+  webpack({
+    entry: './test/app/app.js',
+    output: {
+      path: outputDirectory,
+      filename: '[name].js'
+    },
+    plugins: [
+      new Plugin({
+        config: {
+          base: baseConfig,
+          extend: extendConfig
         }
+      })
+    ]
+  }, async (error, stats) => {
+    if (error) {
+      return t.end(error);
+    }
 
-        if (stats.hasErrors()) {
-            return t.end(stats.toString());
-        }
+    if (stats.hasErrors()) {
+      return t.end(stats.toString());
+    }
 
-        const filePath = path.join(outputDir, 'manifest.json');
-        const manifest = await loadJsonFile(filePath);
-        t.deepEqual(config, manifest);
-        t.true(await pathExists(filePath));
+    const filePath = path.join(outputDirectory, 'manifest.json');
+    const manifest = await loadJsonFile(filePath);
+    t.deepEqual(config, manifest);
+    t.true(await pathExists(filePath));
 
-        t.end();
-    });
+    t.end();
+  });
 });
