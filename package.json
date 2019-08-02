@@ -13,11 +13,12 @@
   },
   "main": "lib/index.js",
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "scripts": {
     "version": "conventional-changelog -i changelog.md -s -r 0 && git add changelog.md && git commit -m \"build: update changelog\"",
-    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "build": "rimraf lib && babel src -d lib",
     "test": "nyc ava"
   },
