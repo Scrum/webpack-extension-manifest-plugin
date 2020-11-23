@@ -1,6 +1,6 @@
 {
   "name": "webpack-extension-manifest-plugin",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Creates manifest json file based you config",
   "license": "MIT",
   "repository": "Scrum/webpack-extension-manifest-plugin",
