@@ -1,19 +1,33 @@
+## 0.6.0 (2020-11-23)
+
+* ci: forgot nycrc ([7a7bf37](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/7a7bf37))
+* build: update dep dev and build system ([aca039e](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/aca039e))
+* build(deps): bump acorn from 6.2.1 to 6.4.1 ([2af2401](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/2af2401))
+* build(deps): bump elliptic from 6.5.0 to 6.5.3 ([3a0019e](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/3a0019e))
+* build(deps): bump eslint-utils from 1.4.0 to 1.4.2 ([f24af31](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/f24af31))
+* build(deps): bump handlebars from 4.1.2 to 4.5.3 ([e1f7286](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/e1f7286))
+* fix: support webpack5 ([b7077b9](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/b7077b9))
+
+
+
 ## 0.5.0 (2019-08-02)
 
-* docs: fix user name ([99eea7d](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/99eea7d))
-* docs: update node support ([3863985](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/3863985))
+* 0.5.0 ([2427f0a](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/2427f0a))
+* Create funding.yml ([6e85743](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/6e85743))
 * build: bundle ([79ec96b](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/79ec96b))
 * build: script coveralls ([4cf8d45](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/4cf8d45))
+* build: update changelog ([78128af](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/78128af))
 * build: update config editor ([14c9252](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/14c9252))
 * build: update depdev ([af9c04d](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/af9c04d))
 * build: update depDev and made settings to file ([0aeeb5e](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/0aeeb5e))
 * build(deps): bump lodash from 4.17.4 to 4.17.14 ([a9913a9](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/a9913a9))
 * build(deps): bump lodash.template from 4.4.0 to 4.5.0 ([a377397](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/a377397))
 * build(deps): bump stringstream from 0.0.5 to 0.0.6 ([c69db0a](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/c69db0a))
+* docs: fix user name ([99eea7d](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/99eea7d))
+* docs: update node support ([3863985](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/3863985))
 * ci: drop support old node ([9b9e998](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/9b9e998))
 * perf: change from deprecated method, close #25 ([9ec9fb9](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/9ec9fb9)), closes [#25](https://github.com/Scrum/webpack-extension-manifest-plugin/issues/25)
 * test: typo and update config to prod ([1832077](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/1832077))
-* Create funding.yml ([6e85743](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/6e85743))
 
 
 
