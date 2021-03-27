@@ -56,3 +56,8 @@ module.exports = {
 Type: `Object`  
 Default: `{}`  
 Description: *Can take a ready-made configuration for a file manifest or a set of parameters `base`, `extend`*  
+
+### `minify`
+Type: `Boolean`  
+Default: `false`  
+Description: *Controls if the output should be minified*  
