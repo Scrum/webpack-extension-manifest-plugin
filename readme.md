@@ -34,14 +34,14 @@ export default {
 ```js
 import WebpackExtensionManifestPlugin from 'webpack-extension-manifest-plugin';
 import baseManifest from './baseManifest.js';
-import pkg from './package.json';
+import package_ from './package.json';
 
 module.exports = {
   plugins: [
     new WebpackExtensionManifestPlugin({
       config: {
         base: baseManifest,
-        extend: {version: pkg.version}
+        extend: {version: package_.version}
       }
     })
   ]
