@@ -1,5 +1,14 @@
+## 0.7.0 (2021-03-29)
+
+* style: after lint ([bd2d913](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/bd2d913))
+* Add minify option ([0f6c71c](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/0f6c71c))
+* build(deps): bump ini from 1.3.5 to 1.3.7 ([eef83cf](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/eef83cf))
+
+
+
 ## 0.6.0 (2020-11-23)
 
+* 0.6.0 ([d7d3547](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/d7d3547))
 * ci: forgot nycrc ([7a7bf37](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/7a7bf37))
 * build: update dep dev and build system ([aca039e](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/aca039e))
 * build(deps): bump acorn from 6.2.1 to 6.4.1 ([2af2401](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/2af2401))
