@@ -33,31 +33,36 @@ export default {
 **webpack.config.js**
 ```js
 import WebpackExtensionManifestPlugin from 'webpack-extension-manifest-plugin';
-import baseManifest from './baseManifest.js';
-import package_ from './package.json';
 
 module.exports = {
   plugins: [
     new WebpackExtensionManifestPlugin({
       config: {
-        base: baseManifest,
-        extend: {version: package_.version}
-      }
+        base: './baseManifest.js',
+        extend: {description: 'my description'}
+      },
+      pkgJsonProps: [
+        'version'
+      ]
     })
   ]
 };
 
 ```
-*Create manifest.json with extend configs `{name: 'my manifest', version: '0.0.0'}`*
+*Create manifest.json with extend configs `{name: 'my manifest', description: 'my description', version: '0.0.0'}`*
 
 ## Options
 
 ### `config`
 Type: `Object`  
 Default: `{}`  
-Description: *Can take a ready-made configuration for a file manifest or a set of parameters `base`, `extend`*  
+Description: *Can take a ready-made configuration or filename (to fetch from) for the manifest file, or a set of parameters `base`, `extend` (both of which can be a filename or an object)*  
 
 ### `minify`
 Type: `Boolean`  
 Default: `false`  
 Description: *Controls if the output should be minified*  
+
+### `pkgJsonProps`
+Type: `Array of strings`  
+Description: *Adds specified properties from your package.json file into the manifest*  

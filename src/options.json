@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "required": ["config"],
+  "properties": {
+    "config": {
+      "type": ["object", "string"],
+      "properties": {
+        "base": {
+          "type": ["object", "string"],
+          "additionalProperties": true
+        },
+        "extends": {
+          "type": ["object", "string"],
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true,
+      "description": "Can take a ready-made configuration or filename (to fetch from) for the manifest file, or a set of parameters `base`, `extend` (both of which can be a filename or an object)"
+    },
+    "minify": {
+      "type": "boolean",
+      "description": "Controls if the output should be minified"
+    },
+    "pkgJsonProps": {
+      "type": "array",
+      "additionalItems": { "type": "string" },
+      "description": "Adds specified properties from your package.json file into the manifest"
+    }
+  },
+  "additionalProperties": false
+}
