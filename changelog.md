@@ -1,7 +1,22 @@
+## 0.8.0 (2021-08-09)
+
+* build: update lock ([cd4eb7c](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/cd4eb7c))
+* build(deps): bump browserslist from 4.14.7 to 4.16.6 ([d1bbfdb](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/d1bbfdb))
+* build(deps): bump handlebars from 4.7.6 to 4.7.7 ([700f8fc](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/700f8fc))
+* build(deps): bump hosted-git-info from 2.8.8 to 2.8.9 ([d5b2b02](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/d5b2b02))
+* build(deps): bump lodash from 4.17.20 to 4.17.21 ([beb899c](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/beb899c))
+* build(deps): bump normalize-url from 4.5.0 to 4.5.1 ([f0a038d](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/f0a038d))
+* build(deps): bump y18n from 4.0.0 to 4.0.1 ([16e8ab8](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/16e8ab8))
+* feat: add file watching, code completion, and pkgJson prop coppier ([fb5d533](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/fb5d533))
+* Update readme.md ([4884897](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/4884897))
+
+
+
 ## 0.7.0 (2021-03-29)
 
-* style: after lint ([bd2d913](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/bd2d913))
+* 0.7.0 ([ee57136](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/ee57136))
 * Add minify option ([0f6c71c](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/0f6c71c))
+* style: after lint ([bd2d913](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/bd2d913))
 * build(deps): bump ini from 1.3.5 to 1.3.7 ([eef83cf](https://github.com/Scrum/webpack-extension-manifest-plugin/commit/eef83cf))
 
 
